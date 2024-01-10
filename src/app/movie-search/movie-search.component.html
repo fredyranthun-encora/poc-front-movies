@@ -1,0 +1,12 @@
+<div class="search-container">
+  <form id="movie-search-form" [formGroup]="queryForm" (ngSubmit)="submitQueryChange()">
+    <div class="input-contain">
+      <input (keyup)="handleKeyUp()" type="text" id="search-input" autocomplete="off" formControlName="query" aria-labelledby="placeholder-movie-title">
+      
+      <label class="placeholder-text" for="search-input" id="placeholder-movie-title">
+        <div class="text" [class.changed]="inputNotEmpty">Search movie</div>
+      </label>
+    </div>
+    <!-- <button type="submit">Search</button> -->
+  </form>
+</div>

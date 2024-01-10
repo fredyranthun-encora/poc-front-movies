@@ -1,0 +1,9 @@
+<app-movie-search (queryChanged)="changeQueryWord($event)"></app-movie-search>
+<ng-container *ngIf="movies">
+  <app-pagination [currentPage]="currentPage" [itemsPerPage]="20" [totalPages]="movies.total_pages" (pageChanged)="changePage($event)"></app-pagination>
+  <div ngModel #moviesContainer class="movie-cards-container">
+    @for (movie of movies.results; track movie.id) {
+      <app-movie [movie]="movie"></app-movie>
+    }
+  </div>
+</ng-container>

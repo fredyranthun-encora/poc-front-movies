@@ -1,0 +1,43 @@
+@use '../../styles' as base
+
+.movie-details
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  padding: 16px
+  max-width: 500px
+  margin: auto
+  gap: 16px
+
+  .poster
+    width: 300px
+    height: auto
+    border-radius: 8px
+    margin-bottom: 16px
+
+  .info
+    text-align: center
+
+    h2
+      margin: 0
+      font-size: 1.5rem
+
+    .popularity
+      color: #888
+
+    p
+      margin: 0
+      margin-top: 8px
+
+  .back-button
+    background-color: base.$primary-color
+    color: #fff
+    border: none
+    padding: 8px 16px
+    font-size: 0.9rem
+    font-weight: 500
+    border-radius: 4px
+    margin: 0 5px
+    text-transform: uppercase
+    text-decoration: none

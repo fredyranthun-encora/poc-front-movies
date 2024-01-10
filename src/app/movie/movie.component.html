@@ -1,0 +1,16 @@
+<!-- eslint-disable @angular-eslint/template/elements-content -->
+<div class="movie-card">
+  <img
+    class="listing-photo"
+    [src]="'https://image.tmdb.org/t/p/w342/' + this.movie.poster_path"
+    alt="Poster of movie {{ movie.title }}"
+    crossorigin
+    (error)="handleMissingImage($event)"
+  />
+  <div class="movie-details">
+    <h2>{{ movie.title }}</h2>
+    <p>{{ this.movie.overview }}</p>
+    <p>{{ movie.release_date }}</p>
+    <a [routerLink]="['movie-details', movie.id]"></a>
+  </div>
+</div>

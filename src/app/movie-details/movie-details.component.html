@@ -1,0 +1,18 @@
+@if (movie) {
+    <div class="movie-details">
+      <img
+        class="poster"
+        [src]="'https://image.tmdb.org/t/p/w342/' + this.movie.poster_path"
+        alt="Poster of movie {{ movie.title }}"
+        crossorigin
+      />
+      <div class="info">
+        <h2>{{ movie.title }}</h2>
+        <p class="popularity">Popularity: {{ movie.popularity }}</p>
+        <p>{{ movie.overview }}</p>
+      </div>
+      <a [routerLink]="['']" class="back-button">Back to movies</a>
+    </div>
+} @else {
+  <div>No movie</div>
+}

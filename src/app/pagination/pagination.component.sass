@@ -1,0 +1,33 @@
+@use 'sass:color'
+@use '../../styles' as base
+
+.pagination-container
+  margin: 20px
+  display: flex
+  justify-content: center
+
+  .pagination-button
+    background-color: base.$primary-color
+    color: #fff
+    border: none
+    padding: 8px 16px
+    font-size: 0.9rem
+    font-weight: 500
+    border-radius: 4px
+    margin: 0 5px
+    text-transform: uppercase
+
+    &:not(:disabled)
+      cursor: pointer
+
+    &:hover
+      background-color: color.scale(base.$primary-color, $lightness: -30%)
+
+    &:disabled
+      background-color: #afafaf
+      opacity: 0.65
+
+  .pagination-text
+    padding: 8px 15px
+    font-size: 0.9rem
+    margin: 0 5px
